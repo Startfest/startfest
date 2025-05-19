@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="img/logo_com_fundo.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Eventos</title>
+    <link rel="stylesheet" href="assets/Lista_de_Eventos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href=""
+</head>
+<body>
+
+    <h1>Lista de Eventos</h1>
+
+    <!-- Caixa de Pesquisa e Botão Criar Evento -->
+    <div class="filter-container">
+        <input type="text" id="searchInput" placeholder="Pesquise por título de evento" onkeyup="searchEvent()">
+        <button onclick="window.location.href='Novo_evento.html';">Criar Novo Evento</button>
+    </div>
+
+    <div class="message" id="message"></div>
+
+    <!-- Lista de Eventos -->
+    <div class="events-container" id="eventsContainer">
+        <!-- Cards de Eventos serão inseridos aqui via JS -->
+    </div>
+
+    <!-- Formulário de Edição -->
+    <div class="edit-form" id="editForm" style="display:none;">
+        <h2>Editar Evento</h2>
+        <input type="text" id="editTitle" placeholder="Título do evento">
+        <input type="text" id="editAddress" placeholder="Endereço do evento">
+        <input type="date" id="editDate">
+        
+        <!-- Campo de Horário -->
+        <input type="time" id="editTime">
+
+        <!-- Texto explicativo ao lado do seletor de cor -->
+        <label for="editColor" class="color-label">Escolha a cor principal do evento</label>
+        <input type="color" id="editColor" value="#000000">
+        
+        <!-- Botões de salvar e cancelar lado a lado -->
+        <div class="buttons-container">
+            <button onclick="saveEvent()">Salvar Evento</button>
+            <button onclick="cancelEdit()">Cancelar</button>
+        </div>
+    </div>
+    
+    <script src="js/Lista_de_eventos.js"></script>
+</body>
+</html>

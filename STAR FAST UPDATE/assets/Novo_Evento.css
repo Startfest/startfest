@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins";
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #6e4c9c, #3a2a6c);
+    color: #fff;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+h1 {
+    text-align: center;
+    color: #402468;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.input-field {
+    width: calc(100% - 12px);
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #6831a2;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+    display: inline-block;
+}
+
+.input-field:focus {
+    border-color: #5e2e91;
+    outline: none;
+}
+
+.calendar-container {
+    margin: 20px 0;
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #5e2e91;
+}
+
+.nav-button {
+    background: none;
+    border: none;
+    color: #5e2e91;
+    font-size: 20px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.nav-button:hover {
+    transform: scale(1.1);
+}
+
+.days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    color: #5e2e91;
+}
+
+.day {
+    font-weight: bold;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.dates {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.date {
+    padding: 15px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s;
+    color: #5e2e91;
+}
+
+.date:hover {
+    background-color: rgba(94, 46, 145, 0.1);
+    transform: scale(1.05);
+}
+
+.today {
+    background-color: rgba(94, 46, 145, 0.3);
+}
+
+.past {
+    color: #373636;
+    cursor: not-allowed;
+}
+
+.year-select {
+    margin-left: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #fff;
+    color: #6831a2;
+}
+
+.comment-section {
+    font-family: "Poppins";
+    margin-top: 20px;
+}
+
+.submit-button {
+    font-family: "Poppins";
+    width: 100%;
+    padding: 10px;
+    background-color: #5e2e91;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.submit-button:hover {
+    background-color: #4e2383;
+    transform: scale(1.05);
+}
+
+.time-select {
+    margin-left: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100px;
+    color: #5e2e91;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    display: flex;           /* Usando flexbox para alinhar label e input */
+    align-items: center;  
+}
+
+#eventDate {
+    margin-right: 15px;  /* Adiciona espaço entre o campo de data e o campo de hora */
+}
+
+.form-group label {
+    font-weight: bold;
+    flex: 1;
+    margin-right: 10px;
+    color:#000;
+    display: inline-block;   /* Garante que o label e o input fiquem na mesma linha */
+    width: auto;             /* Ajuste automático de largura */
+    white-space: nowrap;     /* Impede que o texto da label quebre em várias linhas */
+    margin-right: 10px;    
+}
+
+.event-list {
+    margin-top: 20px;
+    list-style-type: none;
+    padding: 0;
+    color: #ddd;
+}
+/* Estilo para o botão "Criar Novo Evento" */
+.create-event-button {
+    font-size: 18px; /* Tamanho da fonte */
+    color: #fff; /* Cor do texto em branco */
+    background-color: #402468; /* Cor de fundo azul */
+    border: none; /* Remove a borda padrão */
+    padding: 12px 24px; /* Adiciona um preenchimento interno (espaço dentro do botão) */
+    border-radius: 4px; /* Borda arredondada */
+    cursor: pointer; /* Muda o cursor para uma mãozinha ao passar sobre o botão */
+    transition: background-color 0.3s ease; /* Transição suave para a mudança de cor */
+    text-align: center; /* Alinha o texto ao centro */
+    display: flex; /* Deixa o botão no mesmo nível com outros elementos */
+    text-decoration: none;
+    justify-content: center;
+}
+
+/* Efeito de hover (quando o mouse passa por cima) */
+.create-event-button:hover {
+    background-color: #402468; /* Cor de fundo mais escura ao passar o mouse */
+}
+
+
+
+.event-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    color: #ffffff; /* Aqui você define a cor do texto */
+}
+
+
+.event-item .event-name,
+.event-item .event-time {
+    font-size: 14px; /* Ajuste o valor conforme necessário */
+    color: #ffffff;  /* Cor do texto (opcional) */
+    margin-right: 50px
+}
+.event-date {
+    font-size: 12px;
+}
+
+
+.remove-button {
+    background: none;
+    border: none;
+    color: #e74c3c;
+    cursor: pointer;
+}
+
+.feedback {
+display: block;
+margin-top: 10px;
+padding: 15px;
+border-radius: 5px;
+text-align: center;
+font-weight: bold;
+opacity: 0;
+transition: opacity 0.5s ease-in-out;
+display: none; 
+}
+
+.feedback.success {
+background-color: #28a745; /* Verde de sucesso */
+color: white;
+border: 2px solid #218838; /* Uma borda mais escura */
+}
+
+.feedback.error {
+background-color: #dc3545; /* Vermelho de erro */
+color: white;
+border: 2px solid #c82333; /* Borda mais escura */
+}
+
+.feedback.show {
+display: block;  /* Torna a mensagem visível */
+opacity: 1;
+}
+
+#eventSection h2 {
+    color: #5e2e91; /* Cor do título */
+    font-size: 20px;
+    margin-bottom: 15px; /* Distância entre o título e a lista */
+    text-align: center; /* Alinhar o título ao centro */
+}
+
+
+

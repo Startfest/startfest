@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="img/logo_com_fundo.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar Novo Evento</title>
+    <link rel="stylesheet" href="assets/Novo_Evento.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Criar Novo Evento</h1>
+        <form id="eventForm">
+            <div class="form-group">
+                <label for="eventName">Nome do Evento:</label>
+                <input type="text" id="eventName" name="eventName" required placeholder="Digite o nome do evento" class="input-field">
+            </div>
+            <div class="form-group">
+                <label for="eventColor">Cor do Evento:</label>
+                <input type="color" id="eventColor" name="eventColor" class="input-field">
+            </div>
+
+            <div class="form-group">
+                <label for="eventDate">Data do Evento:</label>
+                <input type="date" id="eventDate" name="eventDate" required class="input-field">
+                <label for="eventTime">Hora do Evento:</label>
+                <input type="time" id="eventTime" name="eventTime" required class="input-field">
+            </div>
+            <div class="form-group">
+                <label for="eventAddress">Endereço do Evento:</label>
+                <input type="text" id="eventAddress" name="eventAddress" required placeholder="Digite o endereço do evento" class="input-field">
+            </div>
+
+            <div class="calendar-container">
+                <div class="header">
+                    <button id="prevMonth" class="nav-button" aria-label="Mês anterior"><i class="fas fa-chevron-left"></i></button>
+                    <h2 id="monthYear"></h2>
+                    <button id="nextMonth" class="nav-button" aria-label="Próximo mês"><i class="fas fa-chevron-right"></i></button>
+                    <select id="yearSelect" class="year-select" aria-label="Selecionar ano"></select>
+                </div>
+                <div class="days">
+                    <div class="day">Dom</div>
+                    <div class="day">Seg</div>
+                    <div class="day">Ter</div>
+                    <div class="day">Qua</div>
+                    <div class="day">Qui</div>
+                    <div class="day">Sex</div>
+                    <div class="day">Sáb</div>
+                </div>
+                <div id="calendarDates" class="dates"></div>
+            </div>
+            <a href="ListaDeEventos.html" class="create-event-button">Criar Novo Evento</a>
+            
+        </form>
+
+        <div id="feedbackMessage" class="feedback"></div>
+       
+        <h2 style="color: black;">Eventos Criados</h2>
+        <ul id="eventList" class="event-list"></ul>
+
+
+        <ul id="eventList" class="event-list"></ul>
+        <script src="js/Novo_Evento.js"></script>
+    </div>
+</body>
+</html>

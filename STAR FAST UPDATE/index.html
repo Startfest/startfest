@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/logo_com_fundo.png" type="image/x-icon">
+    <title>START FEST</title>
+    <!-- Link CDN Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/teladeinicio.css">
+</head>
+
+<body>
+    <!-- Tela de Início: Seção Principal -->
+    <section class="inicio">
+        <nav class="nav-bar fade-in">
+            <img src="img/nova_logo-removebg-preview.png" class="logo fade-in" alt="">
+            <li class="nav-list"><a href="index.html" class="fade-in">Inicio</a></li>
+            <li class="nav-list"><a href="Sobre_Nos.html" class="fade-in">Sobre nós</a></li>
+            <li class="nav-list"><a href="contatos.html" class="fade-in">Contatos</a></li>
+            <li class="nav-list">
+                <button class="btn fade-in" id="login-button">Login</button>
+            </li>
+        </nav>
+        <div class="scroll-down">
+            <i class="bi bi-chevron-down"></i>
+        </div>
+        <div class="container-main fade-in">
+            <div class="textos-principais">
+                <h1 class="h1-parte-main">Sistema de <br>agendamento<br>de eventos</h1>
+                <p class="p-parte-main">Criamos um site para você agendar<br>seus eventos com organização e rapidez.
+                </p>
+            </div>
+            <div class="button-parte-main">
+                <button class="btn-parte-main" id="cadastro-button">Conheça já</button>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="img/mulher-removebg-preview.png" class="mulher fade-in" alt="">
+        </div>
+        <div class="gradient-bg"></div> <!--Gradiente-->
+        <div class="linha-hover"></div>
+       
+        
+    </section>
+
+    <!-- Tela de Propostas - Adicionando abaixo do conteúdo principal -->
+    <section class="propostas" id="propostas">
+        <div class="gradient-propostas"></div> <!--Gradiente-->
+        <h2 class="titulo-propostas fade-in">Seu site de Agendamento de Eventos</h2>
+        <div class="cards-container">
+            <!-- Card 1 -->
+            <div class="card card-1 fade-in">
+                <div class="icon"><i class="bi bi-calendar-week"></i></div>
+                <h3>Agende seus eventos com poucos cliques</h3>
+                <p>Escolha a data, o horário e o local do evento de forma prática e rápida. Nossa plataforma torna o
+                    processo de agendamento simples e eficiente.</p>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="card card-2 fade-in">
+                <div class="icon"><i class="bi bi-laptop"></i></div>
+                <h3>Um site fácil de usar para todos</h3>
+                <p>Nós pensamos no design para facilitar a sua experiência. Em poucos passos, você organiza seu evento,
+                    mesmo sem experiência técnica.</p>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="card card-3 fade-in">
+                <div class="icon"><i class="bi bi-folder"></i></div>
+                <h3>Tenha tudo sob controle</h3>
+                <p>Centralize todas as informações do seu evento em um só lugar. Tudo organizado para você.</p>
+            </div>
+        </div>
+
+    </section>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-info">
+                <h3>START FEST</h3>
+                <p>Seu sistema de agendamento de eventos com praticidade e organização.</p>
+            </div>
+            <div class="footer-links">
+                <h2>Links úteis</h2>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="Sobre_Nos.html">Sobre nós</a></li>
+                    <li><a href="contatos.html">Contatos</a></li>
+                    <li><a href="#">Política de Privacidade</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h2>Contato</h2>
+                <ul>
+                    <li>Email: <a href="mailto:startfest8@gmail.com">startfest8@gmail.com</a></li>
+                    <li>Telefone: 999 000 888</li>
+                </ul>
+            </div>
+        </div>
+    
+        <!-- Adicionando os ícones de redes sociais -->
+        <div class="footer-social-icons">
+            <a href="https://www.instagram.com/startfest__/profilecard/?igsh=MTVlYXhscWQ0ZzF2eA==" class="social-icon" target="_blank"><i class="bi bi-instagram"></i></a>
+            <a href="https://github.com/SEU_USUARIO" class="social-icon" target="_blank"><i class="bi bi-github"></i></a>
+            <a href="https://www.linkedin.com/in/SEU_USUARIO" class="social-icon" target="_blank"><i class="bi bi-linkedin"></i></a>
+        </div>
+    
+        <div class="footer-bottom">
+            <p>&copy; 2024 Start Fest. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    
+    <script>
+
+document.querySelector('.scroll-down').addEventListener('click', function () {
+    document.querySelector('#propostas').scrollIntoView({ behavior: 'smooth' });
+});
+
+        document.getElementById('login-button').addEventListener('click', function () {
+            window.location.href = 'teladecadastro.html';
+        });
+        document.getElementById('cadastro-button').addEventListener('click', function () {
+            window.location.href = 'teladecadastro.html';
+        });
+
+        document.querySelector('.scroll-down').addEventListener('click', function () {
+    document.querySelector('.propostas').scrollIntoView({ behavior: 'smooth' });
+});
+
+    </script>
+</body>
+
+</html>

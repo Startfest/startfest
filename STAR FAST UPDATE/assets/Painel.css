@@ -1,0 +1,316 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;700&display=swap');
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Rubik", sans-serif;
+    background-color: #f8f9fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.5s forwards;
+}
+
+/* Logo */
+.logo {
+    margin-bottom: 0px;
+    text-align: center;
+    top: -30px;
+    position: relative;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    background-color: #5D3A8A;
+    border-radius: 20px;
+    padding: 15px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    top: -55px;
+    position: relative;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 10px;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: #d8d8f6;
+}
+
+/* Main Section */
+.main-section {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.welcome-section {
+    display: flex;
+    align-items: center;
+    background-color: #5D3A8A;
+    color: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    max-width: 550px;
+    min-height: 245px;
+    position: relative;
+    overflow: hidden;
+    top: -40px;
+}
+
+.welcome-section img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    margin-right: 20px;
+    transition: all 0.3s ease;
+    max-width: 100%;
+    height: auto;
+    position: absolute;
+    left: -45px;
+}
+
+.welcome-section div {
+    margin-left: 180px;
+}
+
+.welcome-section h5 {
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+.welcome-section p {
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+
+.btn-novo-evento {
+    display: inline-flex;
+    align-items: center;
+    background-color: #d8d8f6;
+    color: #5D3A8A;
+    padding: 20px 30px;
+    border: none;
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-decoration: none;
+}
+
+.btn-novo-evento i {
+    margin-right: 12px;
+}
+
+.btn-novo-evento:hover {
+    background-color: #c4c4d6;
+    transform: scale(1.1);
+}
+
+
+.event-section {
+    background-color: #B0A4D4;
+    padding: 40px;
+    border-radius: 20px;
+    margin-bottom: 50px;
+    width: 100%;
+    box-sizing: border-box;
+    flex-grow: 1;
+}
+
+.event-section h3 {
+    color: #5227a1;
+    font-weight: bold;
+    font-size: 28px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.event-section h3 i {
+    margin-left: 20px;
+}
+
+.event-cards {
+    display: flex;
+    justify-content: space-between;
+}
+
+.event-card {
+    display: block;
+    text-decoration: none; /* Remove o sublinhado */
+    color: inherit; /* Mantém a cor do texto original */
+    background-color: #5D3A8A;
+    width: 32%;
+    height: 240px;
+    border-radius: 20px;
+    transition: transform 0.3s ease-in-out;
+    position: relative;
+    padding: 20px;
+}
+
+.event-card:hover {
+    transform: scale(1.05);
+}
+
+.event-card h4, .event-card p {
+    color: #fff;
+}
+
+.event-card h4 {
+    color: #fff;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.event-card p {
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.navbar a i {
+    margin-right: 0.5rem; /* Espaçamento entre o ícone e o texto */
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-section {
+        flex-direction: column;
+    }
+
+    .card-placeholder {
+        margin-left: 0;
+    }
+
+    .event-cards {
+        flex-direction: column;
+    }
+
+    .event-card {
+        max-width: 100%;
+    }
+}
+/* Calendário */
+.calendar {
+    flex: 1;
+    min-width: 270px;
+    max-width: 340px;
+    background-color: #f4f4f4;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-left: 120px;
+    margin-top: -40px;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #5D3A8A;
+}
+
+.calendar-header button {
+    background-color: #5D3A8A;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.calendar-header button:hover {
+    background-color: #6e4aa9;
+}
+
+.calendar-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+    font-weight: bold;
+    color: #5D3A8A;
+    margin-bottom: 10px;
+}
+
+.calendar-dates {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+    gap: 5px;
+}
+
+.calendar-dates span {
+    display: block;
+    padding: 10px;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+    cursor: pointer;
+    color: #333;
+}
+
+.calendar-dates span:hover {
+    background-color: #5D3A8A;
+    color: #fff;
+}
+
+.calendar-dates .today {
+    background-color: #5D3A8A;
+    color: #fff;
+    font-weight: bold;
+}

@@ -1,0 +1,213 @@
+/* Reset de estilo */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f4f9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+h1:hover {
+    transform: translateY(-5px);
+}
+
+.filter-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.filter-container input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    width: 250px;
+}
+
+.filter-container button, .create-event-btn {
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #5e5c8d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.filter-container button:hover, .create-event-btn:hover {
+    background-color: #4a4782;
+}
+
+.create-event-btn {
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+
+.events-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.event-card {
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.event-card:hover {
+    transform: translateY(-20px);
+}
+
+.event-card .content {
+    padding: 20px;
+    color: #fff;
+}
+
+.event-card h2 {
+    font-size: 1.8em;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.event-card .date-time {
+    font-weight: bold;
+    color: #fff;
+    font-size: 16px;
+}
+
+.event-card .address {
+    color: #fff;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.event-card button {
+    background-color: #633c79;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 15px;
+    margin-right: 5px;
+}
+
+.event-card button:hover {
+    background-color: #4a4782;
+}
+
+.edit-form {
+    margin-top: 20px;
+    width: 90%;
+    max-width: 600px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.edit-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.edit-form input[type="color"] {
+    width: 100px;
+    height: 35px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 0;
+    margin-top: 5px;
+}
+
+/* Personalizando o label para o campo de cor */
+.color-label {
+    font-weight: 600;
+    color: #333;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.edit-form .buttons-container {
+    display: flex;
+    justify-content: flex-start;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* Estilo para o botão "Criar Novo Evento" */
+.create-event-button {
+    font-size: 18px; /* Tamanho da fonte */
+    color: #fff; /* Cor do texto em branco */
+    background-color: #2196F3; /* Cor de fundo azul */
+    border: none; /* Remove a borda padrão */
+    padding: 12px 24px; /* Adiciona um preenchimento interno (espaço dentro do botão) */
+    border-radius: 4px; /* Borda arredondada */
+    cursor: pointer; /* Muda o cursor para uma mãozinha ao passar sobre o botão */
+    transition: background-color 0.3s ease; /* Transição suave para a mudança de cor */
+    text-align: center; /* Alinha o texto ao centro */
+    display: inline-block; /* Deixa o botão no mesmo nível com outros elementos */
+}
+
+/* Efeito de hover (quando o mouse passa por cima) */
+.create-event-button:hover {
+    background-color: #1976D2; /* Cor de fundo mais escura ao passar o mouse */
+}
+
+.edit-form button {
+    background-color: #5e5c8d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.edit-form button:hover {
+    background-color: #4a4782;
+}
+
+.message {
+    margin: 10px 0;
+    padding: 10px;
+    color: #fff;
+    background-color: #4CAF50;
+    border-radius: 5px;
+    display: none;
+}
+
+.message.error {
+    background-color: #f44336;
+}
+
