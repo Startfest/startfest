@@ -18,11 +18,10 @@ Este projeto utiliza as seguintes tecnologias:
 
 - **Frontend**: 
   - HTML, CSS, JavaScript
-  - Framework: React.js (ou Vue.js, Angular, etc.)
   
 - **Backend**:
   - Node.js (Express)
-  - Banco de Dados: MongoDB (ou outro como MySQL, PostgreSQL)
+  - Banco de Dados:MYSql
 
 - **Autenticação**: JWT (JSON Web Tokens) ou OAuth para login e controle de usuários
 
